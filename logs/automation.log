@@ -1,0 +1,14 @@
+./logs/automation-25-06-2025 14:31:55.396 [main] DEBUG org.testng.TestNG - suiteXmlPath: "C:\Users\User\eclipse\opencart\master.xml"
+./logs/automation-25-06-2025 14:31:57.453 [main] INFO  testCases.TC001_AccountRegistrationTest - Chrome Browser
+./logs/automation-25-06-2025 14:32:00.250 [main] INFO  testCases.TC001_AccountRegistrationTest - ****** Starting TC001_AccountRegistationTest********
+./logs/automation-25-06-2025 14:32:00.458 [main] INFO  testCases.TC001_AccountRegistrationTest - *Clicked on MyAccount link*
+./logs/automation-25-06-2025 14:32:01.549 [main] INFO  testCases.TC001_AccountRegistrationTest - *Clicked on Register link*
+./logs/automation-25-06-2025 14:32:01.555 [main] INFO  testCases.TC001_AccountRegistrationTest - *Providing customer details*
+./logs/automation-25-06-2025 14:32:03.832 [main] INFO  testCases.TC001_AccountRegistrationTest - *Validating expected Message*
+./logs/automation-25-06-2025 14:32:03.832 [main] INFO  testCases.TC001_AccountRegistrationTest - Messge Aafter Account Registration:Your Account Has Been Created!
+./logs/automation-25-06-2025 14:32:05.197 [main] INFO  testCases.TC002_LoginTest - Chrome Browser
+./logs/automation-25-06-2025 14:32:08.567 [main] INFO  testCases.TC002_LoginTest - ******Starting TC002 LoingTest**********
+./logs/automation-25-06-2025 14:32:08.568 [main] INFO  testCases.TC002_LoginTest - Home page 
+./logs/automation-25-06-2025 14:32:09.173 [main] INFO  testCases.TC002_LoginTest - Login page 
+./logs/automation-25-06-2025 14:32:09.410 [main] INFO  testCases.TC002_LoginTest - My Account Page 
+./logs/automation-25-06-2025 14:32:10.376 [main] INFO  testCases.TC002_LoginTest - **********TC002_LogingTest Finish******
