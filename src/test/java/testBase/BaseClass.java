@@ -102,9 +102,8 @@ public class BaseClass {
 
 			case "chrome":
 				
-				options = new ChromeOptions();
-				options.addArguments("--headless");
-				driver = new ChromeDriver(options);
+				
+				driver = new ChromeDriver();
 				logger.info("Chrome Browser");
 				break;
 			case "edge":

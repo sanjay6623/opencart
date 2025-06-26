@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="utilities.ExtentReportManager"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="edgetest(failed)">
+  <test thread-count="5" name="Test(failed)">
     <parameter name="os" value="Windows"/>
-    <parameter name="browser" value="MicrosoftEdge"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
+      <class name="testCases.TC002_LoginTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verify_login"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.TC002_LoginTest -->
       <class name="testCases.TC001_AccountRegistrationTest">
         <methods>
           <include name="verify_account_registration"/>
@@ -15,6 +22,13 @@
           <include name="setup"/>
         </methods>
       </class> <!-- testCases.TC001_AccountRegistrationTest -->
+      <class name="testCases.TC003_LogingDDT">
+        <methods>
+          <include name="tearDown"/>
+          <include name="loginDDT" invocation-numbers="0 1 2 3 4 5"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.TC003_LogingDDT -->
     </classes>
-  </test> <!-- edgetest(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
