@@ -2,7 +2,6 @@ package testBase;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
@@ -18,6 +17,7 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -31,6 +31,8 @@ public class BaseClass {
 	public static WebDriver driver;
 	public Logger logger; // Log4j
 	public Properties p;
+	public ChromeOptions options;
+	
 
 	@BeforeClass(groups = { "Sanity", "Master", "Regression", "DataDriven" })
 	@Parameters({ "os", "browser" }) // Passing browser from xml file and switch
@@ -73,6 +75,7 @@ public class BaseClass {
 
 			case "chrome":
 				capabilities.setBrowserName("chrome");
+				
 				break;
 			case "edge":
 				capabilities.setBrowserName("MicrosoftEdge");
@@ -98,7 +101,10 @@ public class BaseClass {
 			switch (br.toLowerCase()) {
 
 			case "chrome":
-				driver = new ChromeDriver();
+				
+				options = new ChromeOptions();
+				options.addArguments("--headless");
+				driver = new ChromeDriver(options);
 				logger.info("Chrome Browser");
 				break;
 			case "edge":
